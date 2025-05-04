@@ -1,9 +1,38 @@
 /* Style the body */
 body {
   background-color: rgb(140, 214, 223);
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  font-family: "Poppins", Arial, sans-serif;
   padding: 20px;
+}
+
+/* Stretch Goal - Sticky Nav Bar */
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px;
+  z-index: 1000;
+  border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: blue;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 /* Headings */
@@ -31,7 +60,7 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Experience list */
+/* Experience list with Flexbox */
 #Experience ul {
   list-style: none;
   padding: 0;
@@ -42,9 +71,19 @@ section {
   padding: 10px;
   margin: 5px 0;
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Connect links */
+
+#Connect ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
 #Connect a {
   color: blue;
   text-decoration: none;
@@ -53,4 +92,8 @@ section {
 
 #Connect a:hover {
   text-decoration: underline;
+}
+
+#Connect i {
+  margin-right: 5px;
 }
