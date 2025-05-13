@@ -1,3 +1,5 @@
+/* base (Mobile first) */
+
 /* Style the body */
 body {
   background-color: rgb(140, 214, 223);
@@ -60,7 +62,7 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Experience list with Flexbox */
+/* Experience list - changed from Flex to Grid for stretch goal */
 #Experience ul {
   list-style: none;
   padding: 0;
@@ -71,8 +73,8 @@ section {
   padding: 10px;
   margin: 5px 0;
   border-radius: 4px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 /* Connect links */
@@ -96,4 +98,62 @@ section {
 
 #Connect i {
   margin-right: 5px;
+}
+
+/* Tablet (min-width: 768px) */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 40px;
+    color: darkblue;
+  }
+
+  h2 {
+    font-size: 28px;
+    color: black;
+  }
+
+  section {
+    padding: 25px;
+    background-color: white;
+  }
+
+  #Connect ul {
+    justify-content: space-around;
+  }
+
+  #Experience li {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Desktop (min-width: 1024px) */
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 48px;
+    font-style: italic;
+  }
+
+  h2 {
+    font-size: 32px;
+    border-bottom: 3px solid gray;
+  }
+
+  nav ul {
+    gap: 30px;
+  }
+
+  section {
+    padding: 40px;
+    background-color: #f0f0f0;
+  }
+
+  #Connect ul {
+    justify-content: flex-end;
+  }
+
+  #Experience li {
+    column-gap: 20px;
+  }
 }
