@@ -100,6 +100,23 @@ section {
   margin-right: 5px;
 }
 
+/* Skills section styling */
+#Skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#Skills li {
+  background-color: #e0f7fa;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #00796b;
+}
+
 /* Tablet (min-width: 768px) */
 
 @media (min-width: 768px) {
