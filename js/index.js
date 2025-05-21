@@ -12,13 +12,13 @@ copyright.innerHTML = `© Vicente Flores ${thisYear}`;
 footer.appendChild(copyright);
 
 /* Skills Section */
-const skills = ["HTML", "CSS", "Git", "VSCode"];
+const Skills = ["HTML", "CSS", "Git", "VSCode"];
 
-const skillsSection = document.getElementById("skills");
-const skillsList = skillsSection.querySelector("ul");
+const SkillsSection = document.getElementById("Skills");
+const SkillsList = SkillsSection.querySelector("ul");
 
-for (let i = 0; i < skills.length; i++) {
-  const skillItem = document.createElement("li");
-  skillItem.textContent = skills[i];
-  skillsList.appendChild(skillItem);
+for (let i = 0; i < Skills.length; i++) {
+  const SkillItem = document.createElement("li");
+  SkillItem.textContent = Skills[i];
+  SkillsList.appendChild(SkillItem);
 }
