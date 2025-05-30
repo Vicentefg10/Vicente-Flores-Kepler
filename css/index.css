@@ -258,3 +258,19 @@ form[name="leave_message"] button:hover {
 #messages li button:hover {
   background-color: darkred;
 }
+
+/* Project List Styling */
+#Projects ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#Projects li {
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}

@@ -59,3 +59,32 @@ messageForm.addEventListener("submit", function (event) {
 
   messageForm.reset();
 });
+
+/* GitHub Repositories Fetch */
+const projectSection = document.getElementById("Projects");
+const projectList = projectSection.querySelector("ul");
+
+fetch("https://api.github.com/users/Vicentefg10/repos")
+  .then((response) => response.json())
+  .then((repositories) => {
+    console.log("GitHub Repositories:", repositories);
+    for (let i = 0; i < repositories.length; i++) {
+      const repo = repositories[i];
+      const project = document.createElement("li");
+      project.innerText = repo.name;
+
+      const repoLink = document.createElement("a");
+      repoLink.href = repo.html_url;
+      repoLink.textContent = ` 🔗`;
+      repoLink.target = "_blank";
+
+      project.appendChild(repoLink);
+      projectList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    console.error("Error fetching repos:", error);
+    const errorItem = document.createElement("li");
+    errorItem.textContent = "⚠️ Unable to load repositories.";
+    projectList.appendChild(errorItem);
+  });
