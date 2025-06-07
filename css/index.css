@@ -14,9 +14,11 @@ nav {
   position: sticky;
   top: 0;
   background-color: white;
-  padding: 10px;
+  padding: 10px 15px;
   z-index: 1000;
   border-bottom: 1px solid #ccc;
+  overflow-x: auto; /* Allow horizontal scrolling on small screens */
+  white-space: nowrap; /* Prevent wrapping of nav items */
 }
 
 nav ul {
@@ -25,12 +27,15 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  flex-wrap: nowrap; /* Prevent wrapping of nav items */
 }
 
 nav a {
   text-decoration: none;
   font-weight: bold;
   color: blue;
+  font-size: 1rem;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -273,4 +278,26 @@ form[name="leave_message"] button:hover {
   padding: 10px 15px;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
+  nav a {
+    overflow-x: auto; /* Ensure scrollable on small screens */
+  }
+  nav a {
+    font-size: 0.85rem; /* Smaller font size for mobile */
+    padding: 4px 6px; /* Smaller padding for mobile */
+  }
+  nav ul {
+    gap: 8px; /* Smaller gap for mobile */
+  }
+}
+
+nav::-webkit-scrollbar {
+  height: 6px;
+}
+
+nav::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
 }
