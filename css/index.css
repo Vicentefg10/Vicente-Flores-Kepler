@@ -281,18 +281,17 @@ form[name="leave_message"] button:hover {
 }
 
 @media (max-width: 480px) {
-  nav a {
-    overflow-x: auto; /* Ensure scrollable on small screens */
-  }
-  nav a {
-    font-size: 0.85rem; /* Smaller font size for mobile */
-    padding: 4px 6px; /* Smaller padding for mobile */
-  }
   nav ul {
     gap: 8px; /* Smaller gap for mobile */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+  }
+  nav a {
+    font-size: 0.75rem; /* Smaller font size for mobile */
+    padding: 4px 6px; /* Smaller padding for mobile */
   }
 }
 
+/* Scrollbar for nav on overflow */
 nav::-webkit-scrollbar {
   height: 6px;
 }
