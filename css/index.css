@@ -14,9 +14,11 @@ nav {
   position: sticky;
   top: 0;
   background-color: white;
-  padding: 10px;
+  padding: 10px 15px;
   z-index: 1000;
   border-bottom: 1px solid #ccc;
+  overflow-x: auto; /* Allow horizontal scrolling on small screens */
+  white-space: nowrap; /* Prevent wrapping of nav items */
 }
 
 nav ul {
@@ -25,12 +27,15 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  flex-wrap: nowrap; /* Prevent wrapping of nav items */
 }
 
 nav a {
   text-decoration: none;
   font-weight: bold;
   color: blue;
+  font-size: 1rem;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -257,4 +262,41 @@ form[name="leave_message"] button:hover {
 
 #messages li button:hover {
   background-color: darkred;
+}
+
+/* Project List Styling */
+#Projects ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#Projects li {
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    gap: 8px; /* Smaller gap for mobile */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+  }
+  nav a {
+    font-size: 0.75rem; /* Smaller font size for mobile */
+    padding: 4px 6px; /* Smaller padding for mobile */
+  }
+}
+
+/* Scrollbar for nav on overflow */
+nav::-webkit-scrollbar {
+  height: 6px;
+}
+
+nav::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
 }
